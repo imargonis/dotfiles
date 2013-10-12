@@ -8,6 +8,9 @@ call vundle#rc()
 " vundle the plugin manager
 Bundle 'gmarik/vundle'
 
+Bundle 'snipMate'
+Bundle 'OmniCppComplete'
+
 " vim-rails Ruby on Rails power tools
 Bundle 'tpope/vim-rails'
 
