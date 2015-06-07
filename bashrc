@@ -8,6 +8,13 @@
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
+# Up/Down Arrow searches in history to complete current command
+if [[ $- == *i* ]]
+then
+	bind '"\e[A": history-search-backward'
+	bind '"\e[B": history-search-forward'
+fi
+
 # for gem executables to work
 PATH=$PATH:~/.gem/ruby/2.0.0/bin
 
