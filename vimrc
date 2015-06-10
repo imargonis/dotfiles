@@ -15,8 +15,9 @@ set autoindent
 set smartindent
 
 " load filetype plugins/indent settings
-filetype plugin on
-filetype indent on
+filetype on		" Enable filetype detection
+filetype indent on	" Enable filetype-specific indenting
+filetype plugin on	" Enable filetype-specific plugins
 
 " make backspace a more flexible
 set backspace=indent,eol,start
