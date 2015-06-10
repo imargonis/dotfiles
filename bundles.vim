@@ -11,6 +11,9 @@ Bundle 'gmarik/vundle'
 Bundle 'snipMate'
 Bundle 'OmniCppComplete'
 
+" vim-ruby
+Bundle 'vim-ruby/vim-ruby'
+
 " vim-rails Ruby on Rails power tools
 Bundle 'tpope/vim-rails'
 
