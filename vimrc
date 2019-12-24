@@ -3,7 +3,7 @@ set nocompatible
 
 " Vundle and bundles configuration
 "source bundles.vim
-source /home/imargonis/.vim/bundles.vim
+source /home/imargonis/.vim/bundle/bundles.vim
 
 " syntax highlighting on
 syntax on
@@ -60,17 +60,7 @@ map <F5>	0i//<ESC>
 map <F6>	02x
 
 " configure tags
-set tags+=~/.vim/tags/cpp_std_tags
-
-" omnicomplete
-let OmniCpp_NamespaceSearch = 1
-let OmniCpp_GlobalScopeSearch = 1
-let OmniCpp_ShowAccess = 1
-let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
-let OmniCpp_MayCompleteDot = 1 " autocomplete after .
-let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
-let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
-let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+" set tags+=~/.vim/tags/cpp_std_tags 
 
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
