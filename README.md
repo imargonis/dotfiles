@@ -1,6 +1,8 @@
 # dotfiles
 dotfiles
 
-git clone https://github.com/imargonis/dotfiles.git
+In your preferred folder (i.e. home folder, folder 'dotfiles' will be created automatically), run:
+*git clone https://github.com/imargonis/dotfiles.git*
 
-ln -s dotfiles/source ~/.destination
+Then link the dotfiles as you wish:
+*ln -s dotfiles/source ~/.destination*
