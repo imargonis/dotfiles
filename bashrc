@@ -15,21 +15,25 @@ then
 	bind '"\e[B": history-search-forward'
 fi
 
-# for gem executables to work
-PATH=$PATH:~/.gem/ruby/2.0.0/bin
+#################
+# aliases start
+################
 
-# for bundler
-#export GEM_HOME=~/.gem/ruby/2.0.0
-
-#
-# Aliases
-#
-
+# general
 alias ls='ls --color=auto'
 alias vi=vim
 alias grep='grep --color=auto'
 alias rm='rm -i'
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# aliases for git
+alias gitst='git status'
+alias gitd='git diff'
+alias gitc='git commit'
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+#################
+# aliases end
+################
+
+# for asdf version manager
+. /opt/asdf-vm/asdf.sh
+. /opt/asdf-vm/completions/asdf.bash
