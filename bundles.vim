@@ -10,7 +10,9 @@ Plugin 'VundleVim/Vundle.vim'
 
 " YouCompleteMe: a code-completion engine for Vim
 " ATTENTION: needs compilation after installation
-" please see https://github.com/ycm-core/YouCompleteMe#full-installation-guide
+" please see https://github.com/ycm-core/YouCompleteMe
+" or https://github.com/ycm-core/YouCompleteMe#full-installation-guide
+" alternatively install package from AUR (on Arch)
 Plugin 'Valloric/YouCompleteMe'
 
 " SnipMate aims to provide support for textual snippets
