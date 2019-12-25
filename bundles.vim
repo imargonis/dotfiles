@@ -2,34 +2,54 @@ set nocompatible               " be iMproved
 filetype on
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" vundle the plugin manager
-Bundle 'gmarik/vundle'
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
-Bundle 'snipMate'
-Bundle 'OmniCppComplete'
+" YouCompleteMe: a code-completion engine for Vim
+" ATTENTION: needs compilation after installation
+" please see https://github.com/ycm-core/YouCompleteMe#full-installation-guide
+Plugin 'Valloric/YouCompleteMe'
+
+" SnipMate aims to provide support for textual snippets
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+" various snippets for various languages for SnipMate
+Plugin 'honza/vim-snippets'
+
+" Command-T is a Vim plug-in that provides an extremely fast "fuzzy" mechanism for:
+" - Opening files and buffers
+" - Jumping to tags and help
+" - Running commands, or previous searches and commands
+" ATTENTION: needs vim compiled with ruby support AND compilation after installation
+" please see https://github.com/wincent/command-t/blob/master/doc/command-t.txt
+Plugin 'wincent/command-t'
+
 
 " vim-ruby
-Bundle 'vim-ruby/vim-ruby'
+Plugin 'vim-ruby/vim-ruby'
 
 " vim-rails Ruby on Rails power tools
-Bundle 'tpope/vim-rails'
+Plugin 'tpope/vim-rails'
 
 " NERD tree allows you to explore your filesystem and to open files and directories
-Bundle 'scrooloose/nerdtree.git'
+Plugin 'scrooloose/nerdtree.git'
 let NERDTreeDirArrows=0
 
 " wisely add 'end in ruby, endfunction/endif/more in vim script,  There's also
 " Bourne shell, VB (don't ask), C/C++ preprocessor, and Lua support
-Bundle 'tpope/vim-endwise'
+Plugin 'tpope/vim-endwise'
 
 " ghetto HTML/XML mappings
-Bundle 'tpope/vim-ragtag'
+Plugin 'tpope/vim-ragtag'
 
 " Surround.vim is all about "surroundings": parentheses, brackets, quotes, XML
 " tags, and more
-Bundle 'tpope/vim-surround'
+Plugin 'tpope/vim-surround'
 
-filetype plugin indent on     " required!
+" All of your Plugins must be added before the following line
+call vundle#end()		" required
+filetype plugin indent on	" required!
