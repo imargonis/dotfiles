@@ -24,6 +24,9 @@ alias ls='ls --color=auto'
 alias vi=vim
 alias grep='grep --color=auto'
 alias rm='rm -i'
+alias cp='cp -i'
+alias ctags_ruby='ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)'
+alias st='hg st'
 
 # aliases for git
 alias gitst='git status'
