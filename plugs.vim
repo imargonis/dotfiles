@@ -24,7 +24,7 @@ Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 let g:snipMate = { 'snippet_version' : 1 }
 " various snippets for various languages for SnipMate
-Plugin 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 
 " Command-T is a Vim plug-in that provides an extremely fast "fuzzy" mechanism for:
 " - Opening files and buffers
@@ -85,7 +85,7 @@ Plug 'shawncplus/phpcomplete.vim'
 " alternatively install package from AUR (on Arch)
 " there is a compile step
 " I had some problems with it
-" Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 
 " Elixir support for vim
 Plug 'elixir-editors/vim-elixir'

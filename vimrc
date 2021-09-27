@@ -3,7 +3,7 @@ set nocompatible
 
 " Plug and bundles configuration
 "source bundles.vim
-source /home/imargonis/.vim/bundle/bundles.vim
+source /home/imargonis/.vim/plugged/plugs.vim
 
 " syntax highlighting on
 syntax on
