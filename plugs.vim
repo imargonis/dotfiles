@@ -1,9 +1,5 @@
 set nocompatible               " be iMproved
 
-" set the runtime path to include Vundle and initialize
-"set rtp+=~/.vim/bundle/Vundle.vim
-"call vundle#begin()
-"
 " ATTENTION!!
 " I am not using Vundle anymore => switched to Plug
 
@@ -14,9 +10,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 call plug#begin('~/.vim/plugged')
-
-" let Vundle manage Vundle, required
-"Plugin 'VundleVim/Vundle.vim'
 
 " SnipMate aims to provide support for textual snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -32,9 +25,9 @@ Plug 'honza/vim-snippets'
 " - Running commands, or previous searches and commands
 " ATTENTION: needs vim compiled with ruby support AND compilation after installation
 " please see https://github.com/wincent/command-t/blob/master/doc/command-t.txt
-Plug 'wincent/command-t'
-
-"Plug 'OmniCppComplete'
+Plug 'wincent/command-t', {
+    \   'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
+    \ }
 
 " vim-ruby
 Plug 'vim-ruby/vim-ruby'
@@ -85,7 +78,7 @@ Plug 'shawncplus/phpcomplete.vim'
 " alternatively install package from AUR (on Arch)
 " there is a compile step
 " I had some problems with it
-Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
 
 " Elixir support for vim
 Plug 'elixir-editors/vim-elixir'
@@ -96,10 +89,17 @@ let g:ale_fixers = { 'elixir': ['mix_format'] }
 
 " Language Server
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'amiralies/coc-elixir', {'do': 'yarn install && yarn prepack'}
+" We have to remap <cr> to make it confirm completion.
+inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+
+" Elixir language server extension based on elixir-ls for coc.nvim
+Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
 
 " This plugin uses ElixirSense to give inside information about your elixir project in vim
 Plug 'slashmili/alchemist.vim'
+
+" Javascript support for vim
+Plug 'pangloss/vim-javascript'
 
 " All of your Plugins must be added before the following line
 "call vundle#end()

@@ -1,10 +1,6 @@
 " explicitly get out of vi-compatible mode
 set nocompatible
 
-" Plug and bundles configuration
-"source bundles.vim
-source /home/imargonis/.vim/plugged/plugs.vim
-
 " syntax highlighting on
 syntax on
 
@@ -13,6 +9,10 @@ syntax on
 set autoindent
 
 set smartindent
+
+" Plug and bundles configuration
+"source bundles.vim
+source /home/imargonis/.vim/plugged/plugs.vim
 
 " load filetype plugins/indent settings
 filetype on		" Enable filetype detection
@@ -33,6 +33,14 @@ set ruler
 
 " show the command being typed
 set showcmd
+
+" show line numbers
+" for relative use "set relativenumbers" or both for hybrid mode
+" I have setup <F12> to toggle them on/off
+set number
+
+set wildmenu
+"set wildmode=longest:full,full
 
 map Q gq
 
@@ -58,20 +66,11 @@ map <F3>	0i/*<ESC>A*/<ESC>
 map <F4>	^2xg_h2x
 map <F5>	0i//<ESC>
 map <F6>	02x
+nmap <F12>	:set invnumber<CR>
 
 " configure tags
 " set tags+=~/.vim/tags/cpp_std_tags 
 set tags+=~/.vim/tags/cpp_std_tags
-
-" omnicomplete
-"let OmniCpp_NamespaceSearch = 1
-"let OmniCpp_GlobalScopeSearch = 1
-"let OmniCpp_ShowAccess = 1
-"let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
-"let OmniCpp_MayCompleteDot = 1 " autocomplete after .
-"let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
-"let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
-"let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
