@@ -84,6 +84,7 @@ PATH=$PATH:~/.local/bin
 
 alias ls='ls --color=auto'
 alias vi=vim
+alias nv=nvim
 alias grep='grep --color=auto'
 alias rm='rm -i'
 alias cp='cp -i'
